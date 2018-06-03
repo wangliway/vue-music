@@ -51,14 +51,14 @@ bg-image($url)
     background-image: url($url + "@3x.png")  //像素比是3的时候的logo
 
 ```
----Ø
+---
 
 - & 引用父级元素
 
 ```css
 &.router-link-active       
 ```
----
+--- 
 
 - jsonp
 > -  跨域的安全限制都是对浏览器端来说的，服务器端是不存在跨域安全限制的。
@@ -68,3 +68,32 @@ bg-image($url)
 
 - encodeURIComponent
 > 对URL进行转义
+---
+- 不换行
+```css
+white-space:nowrap;
+overflow:hidden; 
+
+//文字显示省略号
+white-space:nowrap
+overflow:hidden
+text-overflow:ellipsis
+```
+--- 
+
+- [box-sizing](https://www.jianshu.com/p/e2eb0d8c9de6)
+> 设置盒子模型 盒子的宽度就是width
+
+--- 
+- 挂载时间
+```javascript
+    //浏览器刷新频率为17ms 
+    mounted(){
+      setTimeout(()=>{
+
+      },20)
+    }
+```
+---
+- mounted
+> 在轮播组件引入时为了在数据加载后设置轮播组件mounted 里的函数 加 v-if 进行判断 有数据了才进行挂载轮播组件
