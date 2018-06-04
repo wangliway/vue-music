@@ -2,7 +2,9 @@
   <div id="app">
      <m-header></m-header>
      <tab></tab>
-     <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -18,11 +20,7 @@ export default {
 }
 </script>
 
-<style <style lang="stylus" scoped>
-@import "~common/stylus/variable";
-#app
-  color $color-theme
-  background-color $color-background
- 
+<style scoped lang="stylus" rel="stylesheet/stylus">
+
 </style>
 

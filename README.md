@@ -1,5 +1,5 @@
 # vue-music
-
+慕课网vue 音乐app 的 一些笔记
 > a music webapp demo by vue 
 
 ## Build Setup
@@ -97,3 +97,5 @@ text-overflow:ellipsis
 ---
 - mounted
 > 在轮播组件引入时为了在数据加载后设置轮播组件mounted 里的函数 加 v-if 进行判断 有数据了才进行挂载轮播组件
+> scroll 插件使用时 需要监听传入滚动数据内容 因为在mounted的时候 可能数据还没有请求加载完 导致没有撑开高度
+所以需要监听滚动的数据重新刷新 best-scroll 插件
