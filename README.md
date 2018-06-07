@@ -99,3 +99,17 @@ text-overflow:ellipsis
 > 在轮播组件引入时为了在数据加载后设置轮播组件mounted 里的函数 加 v-if 进行判断 有数据了才进行挂载轮播组件
 > scroll 插件使用时 需要监听传入滚动数据内容 因为在mounted的时候 可能数据还没有请求加载完 导致没有撑开高度
 所以需要监听滚动的数据重新刷新 best-scroll 插件
+
+
+- es6 class
+> 类的所有方法都定义在类的prototype属性上面
+```javascript
+export default class singer {
+  //对象的结构赋值  此时的this 代表实例
+  constructor({id,name}){
+    this.id = id
+    this.name = name
+    this.avatar =  `https://y.gtimg.cn/music/photo_new/T001R300x300M000${id}.jpg?max_age=2592000`
+  }
+}
+```
