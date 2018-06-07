@@ -6,7 +6,6 @@
 
 <script>
   import BScroll from 'better-scroll'
-
   export default {
     name: "scroll",
     props: {
@@ -37,7 +36,6 @@
           probeType: this.probeType,
           click: this.click
         })
-
         if (this.listenScroll) {
           let me = this
           this.scroll.on('scroll', (pos) => {
@@ -85,7 +83,6 @@
 
   }
 </script>
-
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
 
