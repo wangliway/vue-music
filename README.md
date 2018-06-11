@@ -113,3 +113,49 @@ export default class singer {
   }
 }
 ```
+
+- 歌手快速选择的时候的布局
+> 先将顶部top 到y轴50% 然后 利用transform 对半分shortcut
+```css
+      right 0
+      top 50%
+      transform translateY(-50%)
+```
+
+- line-height
+>   - normal
+  取决于用户端。桌面浏览器（包括Firefox）使用默认值，约为1.2，这取决于元素的 font-family。
+>  - <数字>
+  该属性的应用值是这个无单位数字<数字>乘以该元素的字体大小。计算值与指定值相同。大多数情况下，这是设置line-height的推荐方法，不会在继承时产生不确定的结果。
+>  - <长度>
+  指定<长度>用于计算 line box 的高度。查看<长度> 获取可能的单位。以em为单位的值可能会产生不确定的结果（见下面的例子）。
+>  - <百分比>
+  与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。百分比值可能会带来不确定的结果（见下面第二个例子）。
+
+
+```css
+line-height: 1px;
+```
+
+
+- js | 的小技巧
+>  在js整数操作的时候，相当于去除小数点，parseInt。在正数的时候相当于Math.floor(),负数的时候相当于Math.ceil() 注：
+```javascript
+Math.ceil()用作向上取整。
+Math.floor()用作向下取整。
+Math.round() 我们数学中常用到的四舍五入取整。
+
+console.log(0.6|0)//0
+console.log(1.1|0)//1
+console.log(3.65555|0)//3
+console.log(5.99999|0)//5
+console.log(-7.777|0)//-7
+
+var foo = 10;
+foo == 10 && doSomething(); // 等价于 if (foo == 10) doSomething();
+foo == 5 || doSomething(); // 等价于 if (foo != 5) doSomething();
+
+function doSomething(arg1){
+    Arg1 = arg1 || 10; // 如果arg1没有被设置的话，Arg1将被默认设成10
+}
+```

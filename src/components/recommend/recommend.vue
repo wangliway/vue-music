@@ -38,8 +38,6 @@
   import Slider from 'base/slider/slider';
   import Scroll from 'base/scroll/scroll'
   import Loading from 'base/loading/loading'
-
-
   export default {
     data() {
       return {

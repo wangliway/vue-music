@@ -1,13 +1,13 @@
 <template>
-  <div class="wrapper" ref="wrapper">
+  <div ref="wrapper">
     <slot></slot>
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
   import BScroll from 'better-scroll'
+
   export default {
-    name: "scroll",
     props: {
       probeType: {
         type: Number,
@@ -17,9 +17,25 @@
         type: Boolean,
         default: true
       },
+      listenScroll: {
+        type: Boolean,
+        default: false
+      },
       data: {
         type: Array,
         default: null
+      },
+      pullup: {
+        type: Boolean,
+        default: false
+      },
+      beforeScroll: {
+        type: Boolean,
+        default: false
+      },
+      refreshDelay: {
+        type: Number,
+        default: 20
       }
     },
     mounted() {
@@ -76,14 +92,13 @@
     watch: {
       data() {
         setTimeout(() => {
-          this.refresh();
-        }, 20)
+          this.refresh()
+        }, this.refreshDelay)
       }
     }
-
   }
 </script>
-<style scoped lang="stylus" rel="stylesheet/stylus">
 
+<style scoped lang="stylus" rel="stylesheet/stylus">
 
 </style>
